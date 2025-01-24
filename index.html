@@ -58,6 +58,24 @@
             flex: 1;
         }
 
+        .image-gallery {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+            overflow-x: auto;
+            padding: 1rem 0;
+        }
+        
+        .image-gallery img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border: 3px solid;
+            border-image: linear-gradient(to right, #2A9FFF, #2A9FFF) 1;
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(42, 159, 255, 0.5);
+        }
+
         .carousel {
             display: flex;
             overflow-x: auto;
@@ -196,7 +214,13 @@
         <div>
             <h2>About Me</h2>
              <h3>Hi, I’m Gemma, a dedicated fitness coach passionate about helping you achieve sustainable, long-term lifestyle changes.</h3>
-             <p>Whether you're a beginner or have specific goals in mind, I focus on creating client-led, personalized programs tailored to your location, schedule, and available equipment. My approach balances challenge and support, ensuring every session suits your fitness level while progressively pushing you toward your goals. Together, we’ll work not only to enhance your fitness but also to manage stress and educate you on making better health and fitness choices for life.</p> 
+            <div class="image-gallery">
+                <img src="gallery1.jpg" alt="Relaxing massage session">
+                <img src="gallery2.jpg" alt="Specialized treatment tools">
+                <img src="gallery3.jpg" alt="Cozy therapy room">
+                <img src="gallery4.jpg" alt="Client stretching session">
+            </div> 
+            <p>Whether you're a beginner or have specific goals in mind, I focus on creating client-led, personalized programs tailored to your location, schedule, and available equipment. My approach balances challenge and support, ensuring every session suits your fitness level while progressively pushing you toward your goals. Together, we’ll work not only to enhance your fitness but also to manage stress and educate you on making better health and fitness choices for life.</p> 
              <h3>Let’s build a foundation of strength, growth, and empowerment that lasts far beyond our sessions.</h3>       
         </div>
     </section>
