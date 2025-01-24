@@ -94,7 +94,7 @@
         }
 
         .cta a {
-            display: inline-block;
+            display: flex;
             background: #FFAB29;
             color: white;
             text-decoration: none;
@@ -126,6 +126,32 @@
             text-decoration: underline;
         }
 
+        .cta-mobile {
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+            background: #FFAB29;
+            color: white;
+            border-radius: 5%;
+            font-size: 1.2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+            text-align: center;
+            display: block !important;
+            opacity: 0.8;
+        }
+
+        .cta-mobile img {
+            width: 40px;
+            height: 40px;
+            padding: 0px;
+            margin: 0px;
+        }
+
+        .cta-mobile:hover {
+            background: #2389d1;
+        }
+
 
 
         @media (max-width: 600px) {
@@ -148,31 +174,6 @@
                 object-fit: cover;
             }
 
-            .cta-mobile {
-                position: fixed;
-                bottom: 1rem;
-                right: 1rem;
-                background: #FFAB29;
-                color: white;
-                border-radius: 5%;
-                font-size: 1.2rem;
-                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-                text-decoration: none;
-                text-align: center;
-                display: block !important;
-                opacity: 0.8;
-            }
-
-            .cta-mobile img {
-                width: 40px;
-                height: 40px;
-                padding: 0px;
-                margin: 0px;
-            }
-
-            .cta-mobile:hover {
-                background: #2389d1;
-            }
         }
 
         
