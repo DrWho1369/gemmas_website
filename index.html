@@ -101,11 +101,11 @@
             background: #FFAB29;
             color: white;
             text-decoration: none;
-            padding: 1rem 2rem;
+            padding: none;
             border-radius: 5px;
             font-size: 1.2rem;
             transition: background 0.3s;
-            margin-top: 1rem;
+            margin-top: none;
         }
 
         .cta a:hover {
@@ -131,7 +131,6 @@
         }
 
         .cta-mobile {
-            display: none;
             position: fixed;
             bottom: 1rem;
             right: 1rem;
@@ -237,19 +236,7 @@
             <a href="https://www.instagram.com" target="_blank">Instagram</a>
         </p>
     </footer>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const ctaMobile = document.querySelector('.cta-mobile');
 
-        window.addEventListener('scroll', function () {
-            if (window.scrollY > 50) {
-                ctaMobile.style.display = 'block';
-            } else {
-                ctaMobile.style.display = 'none';
-            }
-        });
-    });
-</script>
 
 </body>
 </html>
