@@ -11,29 +11,51 @@
             padding: 0;
             line-height: 1.6;
             color: #333;
+            background: #f9f9f9;
         }
 
         header {
-            background: #4CAF50;
-            color: white;
-            padding: 1rem 0;
+            background: transparent;
+            border: 3px solid;
+            border-image: linear-gradient(to right, #2A9FFF, #2A9FFF) 1;
+            border-radius: 12px;
             text-align: center;
+            margin: 1rem auto;
+            padding: 1rem;
+            max-width: 800px;
         }
 
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
+        header img {
+            max-width: 150px;
+            height: auto;
         }
 
         section {
             padding: 2rem;
             max-width: 800px;
-            margin: 0 auto;
+            margin: 1rem auto;
         }
 
         section h2 {
-            color: #4CAF50;
+            color: #2A9FFF;
             margin-bottom: 1rem;
+        }
+
+        .about {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            border: 3px solid;
+            border-image: linear-gradient(to right, #2A9FFF, #2A9FFF) 1;
+            border-radius: 12px;
+            padding: 1rem;
+        }
+
+        .about img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
         }
 
         .gallery {
@@ -54,7 +76,7 @@
 
         .cta a {
             display: inline-block;
-            background: #4CAF50;
+            background: #2A9FFF;
             color: white;
             text-decoration: none;
             padding: 1rem 2rem;
@@ -64,7 +86,7 @@
         }
 
         .cta a:hover {
-            background: #45a049;
+            background: #2389d1;
         }
 
         footer {
@@ -74,19 +96,43 @@
             padding: 1rem 0;
             margin-top: 2rem;
         }
+
+        @media (max-width: 600px) {
+            .cta a {
+                display: none;
+            }
+
+            .cta-mobile {
+                position: fixed;
+                bottom: 1rem;
+                right: 1rem;
+                background: #2A9FFF;
+                color: white;
+                padding: 0.8rem;
+                border-radius: 50%;
+                font-size: 1.2rem;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+                text-decoration: none;
+                text-align: center;
+            }
+
+            .cta-mobile:hover {
+                background: #2389d1;
+            }
+        }
     </style>
 </head>
 <body>
     <header>
-        <img src="logo1.png" alt="GBD Logo">
+        <img src="logo1.png" alt="Sports Massage Therapy Logo">
     </header>
 
-    <section>
-        <h2>About Me</h2>
-        <img src="logo.jpg" alt="Photo of Gemma">
-        <p>About Me
-Hi, I’m Gemma, a dedicated fitness coach passionate about helping you achieve sustainable, long-term lifestyle changes. Whether you're a beginner or have specific goals in mind, I focus on creating client-led, personalized programs tailored to your location, schedule, and available equipment. My approach balances challenge and support, ensuring every session suits your fitness level while progressively pushing you toward your goals. Together, we’ll work not only to enhance your fitness but also to manage stress and educate you on making better health and fitness choices for life.</p>
-        <p>Let’s build a foundation of strength, growth, and empowerment that lasts far beyond our sessions.</p>
+    <section class="about">
+        <img src="logo.jpg" alt="Photo of the owner">
+        <div>
+            <h2>About Me</h2>
+            <p>Hi, I’m Gemma, a dedicated fitness coach passionate about helping you achieve sustainable, long-term lifestyle changes. Whether you're a beginner or have specific goals in mind, I focus on creating client-led, personalized programs tailored to your location, schedule, and available equipment. My approach balances challenge and support, ensuring every session suits your fitness level while progressively pushing you toward your goals. Together, we’ll work not only to enhance your fitness but also to manage stress and educate you on making better health and fitness choices for life. Let’s build a foundation of strength, growth, and empowerment that lasts far beyond our sessions.</p>
+        </div>
     </section>
 
     <section>
@@ -103,6 +149,7 @@ Hi, I’m Gemma, a dedicated fitness coach passionate about helping you achieve 
         <h2>Contact Me</h2>
         <p>Ready to book your session or have any questions? Feel free to get in touch!</p>
         <a href="mailto:yourfriend@example.com">Email Me</a>
+        <a href="mailto:yourfriend@example.com" class="cta-mobile">&#9993;</a>
     </section>
 
     <footer>
