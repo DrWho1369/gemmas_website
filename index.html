@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sports Massage Therapy</title>
+    <title>GBD FITNESS</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -64,16 +64,36 @@
             flex: 1;
         }
 
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        .carousel {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
             gap: 1rem;
+            padding: 1rem;
         }
 
-        .gallery img {
+        .carousel::-webkit-scrollbar {
+            display: none;
+        }
+
+        .carousel-item {
+            flex: 0 0 80%;
+            scroll-snap-align: center;
+            border: 3px solid;
+            border-image: linear-gradient(to right, #2A9FFF, #2A9FFF) 1;
+            border-radius: 12px;
+            padding: 1rem;
+            text-align: center;
+            box-shadow: 0 0 15px rgba(42, 159, 255, 0.5);
+            background: white;
+        }
+
+        .carousel-item img {
             width: 100%;
             border-radius: 8px;
+            margin-bottom: 0.5rem;
         }
+
 
         .cta {
             text-align: center;
@@ -138,23 +158,36 @@
 </head>
 <body>
     <header>
-        <img src="logo1.png" alt="Sports Massage Therapy Logo">
+        <img src="logo1.png" alt="GBD Fitness Logo">
     </header>
 
     <section class="about">
         <img src="logo.jpg" alt="Photo of the owner">
         <div>
             <h2>About Me</h2>
- <p>Hi, I’m Gemma, a dedicated fitness coach passionate about helping you achieve sustainable, long-term lifestyle changes. Whether you're a beginner or have specific goals in mind, I focus on creating client-led, personalized programs tailored to your location, schedule, and available equipment. My approach balances challenge and support, ensuring every session suits your fitness level while progressively pushing you toward your goals. Together, we’ll work not only to enhance your fitness but also to manage stress and educate you on making better health and fitness choices for life. Let’s build a foundation of strength, growth, and empowerment that lasts far beyond our sessions.</p>        </div>
+             <p>Hi, I’m Gemma, a dedicated fitness coach passionate about helping you achieve sustainable, long-term lifestyle changes. Whether you're a beginner or have specific goals in mind, I focus on creating client-led, personalized programs tailored to your location, schedule, and available equipment. My approach balances challenge and support, ensuring every session suits your fitness level while progressively pushing you toward your goals. Together, we’ll work not only to enhance your fitness but also to manage stress and educate you on making better health and fitness choices for life. Let’s build a foundation of strength, growth, and empowerment that lasts far beyond our sessions.</p>        
+        </div>
     </section>
 
     <section>
         <h2>Gallery</h2>
-        <div class="gallery">
-            <img src="image1.jpg" alt="Massage therapy in session">
-            <img src="image2.jpg" alt="Therapist tools">
-            <img src="image3.jpg" alt="Treatment room">
-            <img src="image4.jpg" alt="Client stretching">
+        <div class="carousel">
+            <div class="carousel-item">
+                <img src="image1.jpg" alt="Massage therapy in session">
+                <p>1 to 1 Personal Training</p>
+            </div>
+            <div class="carousel-item">
+                <img src="image2.jpg" alt="Therapist tools">
+                <p>Parner Training 2 on 1</p>
+            </div>
+            <div class="carousel-item">
+                <img src="image3.jpg" alt="Treatment room">
+                <p>Full Training Programme</p>
+            </div>
+            <div class="carousel-item">
+                <img src="image4.jpg" alt="Client stretching">
+                <p>Nutrition Programme</p>
+            </div>
         </div>
     </section>
 
