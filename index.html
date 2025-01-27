@@ -60,6 +60,22 @@
             flex: 1;
         }
 
+        #owner-photo {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            max-width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        
+        #owner-photo:target {
+            transform: scale(2); /* Enlarges the image */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Adds a shadow for emphasis */
+            z-index: 10; /* Ensures it appears above other content */
+            position: relative; /* Prevents overlap issues */
+        }
+
         .image-gallery {
             display: flex;
             gap: 1rem;
@@ -232,7 +248,9 @@
     </header>
 
     <section class="about">
-        <img src="profile_pic_g.jpg" alt="Photo of the owner">
+        <a href="#owner-photo">
+            <img src="profile_pic_g.jpg" alt="Photo of the owner">
+        </a>
         <div>
             <h2>About Me</h2>
              <h3>Hi, I’m Gemma, a dedicated fitness coach passionate about helping you achieve sustainable, long-term lifestyle changes.</h3>
@@ -246,6 +264,7 @@
              <h3>Let’s build a foundation of strength, growth, and empowerment that lasts far beyond our sessions.</h3>       
         </div>
     </section>
+    <a href="#"></a>
 
     <section>
         <div class="carousel">
