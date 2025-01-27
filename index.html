@@ -13,6 +13,13 @@
             color: #333;
             background: #f9f9f9;
         }
+        
+        header img {
+            max-width: 150px;
+            height: auto;
+            animation: throb 1.5s ease-in-out 2;
+            animation-fill-mode: forwards;
+        }
 
         header {
             background: #f9f9f9;
@@ -21,11 +28,6 @@
             padding: 1rem;
             max-width: 800px;
             box-shadow: 0 0 15px rgba(42, 159, 255, 0.5);
-        }
-
-        header img {
-            max-width: 150px;
-            height: auto;
         }
 
         section {
@@ -163,6 +165,7 @@
             text-align: center;
             display: block !important;
             opacity: 0.8;
+            animation: throb 1.5s ease-in-out infinite;
         }
 
         .cta-mobile img {
@@ -197,8 +200,19 @@
                 border-radius: 10%;
                 object-fit: cover;
             }
-
         }
+
+        @keyframes throb {
+            0%, 100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.2);
+                opacity: 0.8;
+            }
+        }
+        
 
         
         
