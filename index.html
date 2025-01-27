@@ -69,11 +69,11 @@
             object-fit: cover;
         }
         
-        #owner-photo:target {
+        #owner-photo.enlarged {
             transform: scale(2); /* Enlarges the image */
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Adds a shadow for emphasis */
-            z-index: 10; /* Ensures it appears above other content */
-            position: relative; /* Prevents overlap issues */
+            position: relative;
+            z-index: 10;
         }
 
         .image-gallery {
@@ -248,9 +248,7 @@
     </header>
 
     <section class="about">
-        <a href="#owner-photo">
             <img src="profile_pic_g.jpg" alt="Photo of the owner">
-        </a>
         <div>
             <h2>About Me</h2>
              <h3>Hi, I’m Gemma, a dedicated fitness coach passionate about helping you achieve sustainable, long-term lifestyle changes.</h3>
@@ -304,7 +302,15 @@
         </p>
     </footer>
 
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const ownerPhoto = document.getElementById('owner-photo');
 
+        ownerPhoto.addEventListener('click', () => {
+            ownerPhoto.classList.toggle('enlarged');
+        });
+    });
+</script>
 </body>
 </html>
 
