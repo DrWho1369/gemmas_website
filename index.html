@@ -89,12 +89,16 @@
         }
         
         #owner-photo.enlarged {
-            animation: spring 0.4s cubic-bezier(0.25, 1.5, 0.5, 1) forwards;
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Adds a shadow for emphasis */
+            width: 100vw; /* Full width of the viewport */
+            height: 100vh; /* Full height of the viewport */
+            object-fit: contain; /* Ensure the image retains its aspect ratio */
             position: fixed;
-            top: 50%;
-            left: 50%;
+            top: 0;
+            left: 0;
             z-index: 10;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Adds a shadow for emphasis */
+            cursor: zoom-out; /* Indicates the image can be reduced back */
+            transition: all 0.3s ease; /* Smooth transition */
         }
 
         .image-gallery {
