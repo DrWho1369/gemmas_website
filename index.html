@@ -61,9 +61,7 @@
         }
 
         .photo-wrapper {
-            position: relative; /* Wrapper stays in the document flow */
-            min-width: 150px; /* Same width as the original image */
-            min-height: 150px; /* Same height as the original image */
+            display: none;
         }
 
         #owner-photo {
@@ -215,6 +213,11 @@
 
 
         @media (max-width: 600px) {
+            .photo-wrapper {
+                position: relative; /* Wrapper stays in the document flow */
+                min-width: 150px; /* Same width as the original image */
+                min-height: 150px; /* Same height as the original image */
+            }
 
             header {
                 position: sticky;
