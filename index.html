@@ -98,7 +98,7 @@
             top: 50%; /* Center vertically */
             left: 50%; /* Center horizontally */
             transform: translate(-50%, -50%); /* Center the image fully */
-            z-index: 10; /* Bring it to the top layer */
+            z-index: 1000; /* Bring it to the top layer */
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Optional: Add a shadow */
             cursor: zoom-out; /* Indicate clickable behavior */
             transition: all 0.3s ease; /* Smooth animation */
@@ -219,6 +219,7 @@
             display: block !important;
             opacity: 0.8;
             animation: throb 1.5s ease-in-out infinite;
+            z-index: 1001;
         }
 
         .cta-mobile img {
@@ -240,7 +241,7 @@
             header {
                 position: sticky;
                 top: 0;
-                z-index: 1000;
+                z-index: 999;
             }
             
             .about {
