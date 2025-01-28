@@ -89,18 +89,21 @@
         }
         
         #owner-photo.enlarged {
-            width: 100vw; /* Full width of the viewport */
-            height: 100vh; /* Full height of the viewport */
-            object-fit: contain; /* Ensure the image retains its aspect ratio */
+            width: auto; /* Let the width adjust automatically */
+            height: auto; /* Let the height adjust automatically */
+            max-width: 100vw; /* Ensure it doesn’t exceed the viewport width */
+            max-height: 100vh; /* Ensure it doesn’t exceed the viewport height */
+            object-fit: contain; /* Maintain the aspect ratio */
             position: fixed;
             top: 50%; /* Center vertically */
             left: 50%; /* Center horizontally */
-            transform: translate(-50%, -50%); /* Center the image relative to its size */
-            z-index: 1001; /* Ensure it appears on top */
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Adds a shadow for emphasis */
-            cursor: zoom-out; /* Indicates the image can be reduced back */
-            transition: all 0.3s ease; /* Smooth transition */
+            transform: translate(-50%, -50%); /* Center the image fully */
+            z-index: 10; /* Bring it to the top layer */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Optional: Add a shadow */
+            cursor: zoom-out; /* Indicate clickable behavior */
+            transition: all 0.3s ease; /* Smooth animation */
         }
+
 
         .image-gallery {
             display: flex;
