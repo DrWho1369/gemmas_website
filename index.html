@@ -69,7 +69,6 @@
         
 
         #owner-photo {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
             max-width: 150px;
             height: 150px;
@@ -77,8 +76,20 @@
             object-fit: cover;
         }
         
+        @keyframes spring {
+            0% {
+                transform: translate(-50%, -50%) scale(1);
+            }
+            60% {
+                transform: translate(-50%, -50%) scale(2.1); /* Slight overshoot */
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(2);
+            }
+        }
+        
         #owner-photo.enlarged {
-            transform: translate(-50%, -50%) scale(2);
+            animation: spring 0.4s cubic-bezier(0.25, 1.5, 0.5, 1) forwards;
             box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Adds a shadow for emphasis */
             position: fixed;
             top: 50%;
