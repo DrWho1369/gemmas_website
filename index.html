@@ -60,6 +60,12 @@
             flex: 1;
         }
 
+        .photo-wrapper {
+            position: relative; /* Wrapper stays in the document flow */
+            width: 150px; /* Same width as the original image */
+            height: 150px; /* Same height as the original image */
+        }
+
         #owner-photo {
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
@@ -77,8 +83,6 @@
             left: 50%;
             transform: translate(-50%, -50%) scale(2);
             z-index: 10;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
         }
 
         .image-gallery {
@@ -257,7 +261,9 @@
     </header>
 
     <section class="about">
+        <div class="photo-wrapper">
             <img src="profile_pic_g.jpg" id="owner-photo" alt="Photo of the owner">
+        </div>
         <div>
             <h2>About Me</h2>
              <h3>Hi, I’m Gemma, a dedicated fitness coach passionate about helping you achieve sustainable, long-term lifestyle changes.</h3>
