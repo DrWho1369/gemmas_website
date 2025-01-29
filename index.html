@@ -6,14 +6,45 @@
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <title>GBD FITNESS</title>
     <style>
+
         body {
             font-family: Arial, sans-serif;
+            position: relative;
             margin: 0;
             padding: 0;
             line-height: 1.6;
             color: #333;
             background: #f9f9f9;
             text-align: center;
+        }
+        
+        body::before, 
+        body::after {
+            content: "";
+            position: fixed;
+            top: 0;
+            bottom: 0;
+            width: 15vw; /* Adjust width to fit within the first and last quarters */
+            background-size: cover;
+            background-position: center;
+            z-index: -1; /* Ensures it stays in the background */
+        }
+        
+        body::before {
+            left: 0;
+            background-image: url('left-image.jpg'); /* Replace with your actual image URL */
+        }
+        
+        body::after {
+            right: 0;
+            background-image: url('right-image.jpg'); /* Replace with your actual image URL */
+        }
+        
+        @media (max-width: 1024px) {
+            body::before, 
+            body::after {
+                display: none; /* Hide for smaller screens */
+            }
         }
         
         header img {
